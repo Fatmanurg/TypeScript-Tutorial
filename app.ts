@@ -49,4 +49,6 @@ function printName1(firstName: string, lastName: string = 'Tanner') {
     name: string
    }
    const person: Person = {name: 'Gabriel'}
-   
+   function dummyFun(arg: any): any {
+    return arg;
+   }

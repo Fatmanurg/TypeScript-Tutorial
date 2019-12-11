@@ -45,3 +45,6 @@ function printName1(firstName, lastName) {
     console.log("Firstname: " + firstName + ", Lastname: " + lastName);
 }
 var person = { name: 'Gabriel' };
+function dummyFun(arg) {
+    return arg;
+}

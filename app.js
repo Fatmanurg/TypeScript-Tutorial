@@ -18,3 +18,30 @@ if (human instanceof Human) {
 var str2 = 'I am a String';
 var strLength = str.length;
 var strings = ['Hello', 'World', '!'];
+var numbers = [1, 2, 3, 4, 5];
+var stringsAndNumbers = ['Age', 20];
+var exampleTuple = [20, 'https://google.com'];
+var humans = {
+    firstName: 'Frank',
+    age: 32,
+    height: 185,
+    greet: function () {
+        console.log("Greetings stranger!");
+    }
+};
+function add(num1, num2) {
+    return num1 + num2;
+}
+function printName(firstName, lastName) {
+    if (lastName)
+        console.log("Firstname: " + firstName + ", Lastname: " + lastName);
+    else
+        console.log("Firstname: " + firstName);
+}
+printName('Gabriel', 'Tanner');
+printName('Gabriel');
+function printName1(firstName, lastName) {
+    if (lastName === void 0) { lastName = 'Tanner'; }
+    console.log("Firstname: " + firstName + ", Lastname: " + lastName);
+}
+var person = { name: 'Gabriel' };

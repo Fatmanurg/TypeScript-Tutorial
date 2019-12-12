@@ -4,7 +4,7 @@ let boolTrue: boolean = true;
 let str1: string = 'Hello World'
 let multitypeVar: string | number = 'String'
 multitypeVar = 20
-class Human{
+class Human{  //class bir referans tiptir(new)
     name: string;
     constructor(data: string) {
      this.name = data;
@@ -52,3 +52,50 @@ function printName1(firstName: string, lastName: string = 'Tanner') {
    function dummyFun(arg: any): any {
     return arg;
    }
+
+   let sayi :number=10
+   sayi=10.4
+   let sehir:string='İstanbul'
+   let sayilar:number[]=[10,15] //array
+   let sayilar2: Array<number>=[10,15] //generic
+   let dizi:[number,string]=[2,'ankara'] //tuple
+
+   enum Renk{kirmizi,siyah,sari,mavi} //enum
+   let renk:Renk=Renk.kirmizi
+
+    //any, veri tipi belli olmadığı durumlarda kullanılır
+    let deger:any='ankara'
+    deger=2
+    deger=true
+    deger={} //obje demektir.
+
+    let deger2:void=undefined
+    function selamver():void{
+        console.log('hi')
+       // return 5 diyemeyiz
+    }
+    let yas:number //deger atanmayınca undefined olur.
+
+    function topla(x:number,y:number):number{
+        return x+y
+    }
+console.log(topla(1,2))
+
+function davet(ilkdavetli:string,...digerleri:string[]):string{ //rest parameter
+    return ilkdavetli+" "+digerleri.join(" ")
+}
+ console.log(davet("ayşe","salih"))
+ class Ev{
+    _odasayisi:number;
+    _katsayisi:number;
+    _penceresayisi:number;
+    constructor(odasayisi:number,katsayisi:number,penceresayisi:number){
+        this._odasayisi=odasayisi;
+        this._katsayisi=katsayisi;
+        this._penceresayisi=penceresayisi;
+    }
+    
+    
+    }
+    let ev=new Ev(1,2,3);
+    console.log(ev._odasayisi)

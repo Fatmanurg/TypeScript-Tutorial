@@ -1,4 +1,3 @@
-"use strict";
 var str = 'Hello World!';
 var boolFalse = false;
 var boolTrue = true;
@@ -48,3 +47,50 @@ var person = { name: 'Gabriel' };
 function dummyFun(arg) {
     return arg;
 }
+var sayi = 10;
+sayi = 10.4;
+var sehir = 'İstanbul';
+var sayilar = [10, 15]; //array
+var sayilar2 = [10, 15]; //generic
+var dizi = [2, 'ankara']; //tuple
+var Renk;
+(function (Renk) {
+    Renk[Renk["kirmizi"] = 0] = "kirmizi";
+    Renk[Renk["siyah"] = 1] = "siyah";
+    Renk[Renk["sari"] = 2] = "sari";
+    Renk[Renk["mavi"] = 3] = "mavi";
+})(Renk || (Renk = {})); //enum
+var renk = Renk.kirmizi;
+//any, veri tipi belli olmadığı durumlarda kullanılır
+var deger = 'ankara';
+deger = 2;
+deger = true;
+deger = {}; //obje demektir.
+var deger2 = undefined;
+function selamver() {
+    console.log('hi');
+    // return 5 diyemeyiz
+}
+var yas; //deger atanmayınca undefined olur.
+function topla(x, y) {
+    return x + y;
+}
+console.log(topla(1, 2));
+function davet(ilkdavetli) {
+    var digerleri = [];
+    for (var _i = 1; _i < arguments.length; _i++) {
+        digerleri[_i - 1] = arguments[_i];
+    }
+    return ilkdavetli + " " + digerleri.join(" ");
+}
+console.log(davet("ayşe", "salih"));
+var Ev = /** @class */ (function () {
+    function Ev(odasayisi, katsayisi, penceresayisi) {
+        this._odasayisi = odasayisi;
+        this._katsayisi = katsayisi;
+        this._penceresayisi = penceresayisi;
+    }
+    return Ev;
+}());
+var ev = new Ev(1, 2, 3);
+console.log(ev._odasayisi);
